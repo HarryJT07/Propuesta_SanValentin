@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    animation: backgroundChange 10s infinite alternate; 
+}
+
+@keyframes backgroundChange {
+    0% { background-color: #ffebf3; } 
+    25% { background-color: #ffcccb; } 
+    50% { background-color: #ff99cc; } 
+    75% { background-color: #ff69b4; } 
+    100% { background-color: #ff1493; }
+}
+
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.315);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 36px;
+}
+
+p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+button {
+    background: #ff69b4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #ffcccb;
+    padding: 12px 18px;
+    color: #333;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+    background: #ff9999;
+    transform: scale(1.1);
+}
